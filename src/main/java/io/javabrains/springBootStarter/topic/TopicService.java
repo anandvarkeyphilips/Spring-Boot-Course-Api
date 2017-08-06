@@ -1,4 +1,4 @@
-package javabrains.springBootStarter.topic;
+package io.javabrains.springBootStarter.topic;
 
 import java.util.ArrayList;
 import java.util.Arrays;

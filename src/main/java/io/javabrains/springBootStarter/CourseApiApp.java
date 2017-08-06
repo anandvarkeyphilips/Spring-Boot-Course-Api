@@ -1,4 +1,4 @@
-package javabrains.springBootStarter;
+package io.javabrains.springBootStarter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

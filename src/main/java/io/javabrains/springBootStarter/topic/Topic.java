@@ -1,22 +1,24 @@
 package io.javabrains.springBootStarter.topic;
 
 public class Topic {
-	private int id;
+	private String id;
 	private String name;
-	private String desription;
+	private String description;
 	
+	public Topic() {
+	}
 	
-	public Topic(int id, String name, String desription) {
+	public Topic(String id, String name, String description) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.desription = desription;
+		this.description = description;
 	}
 	
-	public int getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -25,11 +27,11 @@ public class Topic {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getDesription() {
-		return desription;
+	public String getDescription() {
+		return description;
 	}
-	public void setDesription(String desription) {
-		this.desription = desription;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 }

@@ -10,15 +10,15 @@ import org.springframework.stereotype.Service;
 public class TopicService {
 
 	private List<Topic> topics = new ArrayList<>(
-			Arrays.asList(new Topic(1, "Spring Framework", "Spring Framework Description"),
-					new Topic(2, "Hibernate Framework", "Hibernate Framework Description"),
-					new Topic(3, "Javascript Framework", "Javascript Framework Description")));
+			Arrays.asList(new Topic("1", "Spring Framework", "Spring Framework Description"),
+					new Topic("2", "Hibernate Framework", "Hibernate Framework Description"),
+					new Topic("3", "Javascript Framework", "Javascript Framework Description")));
 
 	public List<Topic> getAllTopics() {
 		return topics;
 	}
 
-	public Topic getTopic(int id) {
+	public Topic getTopic(String id) {
 		return topics.stream().filter(t -> t.getId() == (id)).findFirst().get();
 	}
 
@@ -26,7 +26,7 @@ public class TopicService {
 		topics.add(topic);
 	}
 
-	public void updateTopic(int id, Topic topic) {
+	public void updateTopic(String id, Topic topic) {
 		for (int i = 0; i < topics.size(); i++) {
 			Topic topicItem = topics.get(i);
 			if (topicItem.getId() == id) {
@@ -36,7 +36,7 @@ public class TopicService {
 		}
 	}
 
-	public void deleteTopic(int id) {
+	public void deleteTopic(String id) {
 		topics.removeIf(t -> t.getId() == id);
 	}
 }
